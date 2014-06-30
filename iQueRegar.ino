@@ -8,7 +8,7 @@ int AZUL = 5;
 int VERDE = 6;
 int ROJO = 4;
 int AGUA = 10;
-// 
+//
 void setup() {
   //
   Serial.begin(9600);
@@ -27,29 +27,29 @@ void loop() {
     digitalWrite(AZUL, LOW);
     digitalWrite(VERDE, LOW);
     }
-    
+
    if (sensorValue >= 350 && sensorValue <= 600) {
     digitalWrite(ROJO, LOW);
     digitalWrite(AZUL, LOW);
     digitalWrite(VERDE, HIGH);
     }
-    
+
    if (sensorValue > 601) {
     digitalWrite(ROJO, LOW);
     digitalWrite(AZUL, HIGH);
     digitalWrite(VERDE, LOW);
     }
- 
-  
+
+
    if (sensorValue > 750) {
     Serial.println(sensorValue);
     digitalWrite(AGUA, HIGH);
     Serial.println(sensorValue);
     delay(12000);
-    digitalWrite(AGUA, LOW);        
-    
-    
-    
+    digitalWrite(AGUA, LOW);
+
+
+
     Serial.println(sensorValue);
     delay(1800000);
     }
